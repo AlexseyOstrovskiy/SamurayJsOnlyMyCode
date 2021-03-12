@@ -2,3 +2,16 @@
     grid-area: navigation;
     background-color: rgb(112, 204, 19);
 }
+
+.rows a{
+    margin-left: 50px;
+    font-family: 'Akaya Telivigala', cursive;
+    font-size: 25px;
+    color: rgb(42, 9, 119) ;
+    text-decoration: none;
+}
+
+.rows a.active{
+    color: rgb(150, 3, 150);
+    font-size: 30px;
+}

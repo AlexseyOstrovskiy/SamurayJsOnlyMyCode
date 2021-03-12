@@ -5,14 +5,14 @@ import { NavLink } from 'react-router-dom';
 const Navigation =(props)=>{
     return (
         <div className={s.navigation}>
-           <div>
-               <NavLink to ='/myProfile'> My profile </NavLink>
+           <div className={s.rows}>
+               <NavLink to ='/myProfile' activeClassName={s.active}> My profile </NavLink>
            </div>
-           <div>
-               <NavLink to ='/users'> Users </NavLink>
+           <div className={s.rows}>
+               <NavLink to ='/users' activeClassName={s.active}> Users </NavLink>
            </div>
-           <div>
-               <NavLink to ='/messenger'> Messenger </NavLink>
+           <div className={s.rows}>
+               <NavLink to ='/messenger' activeClassName={s.active}> Messenger </NavLink>
            </div>
         
         </div>

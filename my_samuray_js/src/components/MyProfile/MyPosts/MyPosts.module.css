@@ -1,0 +1,6 @@
+.MyPosts{
+    grid-area: myPosts;
+    background-color: rgb(38, 143, 138);
+    margin: 5px;
+    border-radius: 10px;
+}

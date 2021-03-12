@@ -1,7 +1,7 @@
 .app-wrapper{
     display: grid;
     grid-template-columns: 2fr 10fr;
-    grid-template-rows: 5fr 50fr 2fr;
+    grid-template-rows: 5fr 55fr 2fr;
     grid-template-areas: 
     'header header'
     'navigation content'

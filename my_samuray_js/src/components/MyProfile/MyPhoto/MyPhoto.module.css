@@ -1,0 +1,6 @@
+.MyPhoto{
+    grid-area: photo;
+    background-color: rgb(13, 148, 189);
+    margin: 5px;
+    border-radius: 10px;
+}

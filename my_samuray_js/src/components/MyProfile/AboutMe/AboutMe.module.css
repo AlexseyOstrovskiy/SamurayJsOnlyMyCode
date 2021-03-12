@@ -1,0 +1,6 @@
+.AboutMe{
+    grid-area: aboutMe;
+    background-color: rgb(40, 240, 230);
+    margin: 5px;
+    border-radius: 10px;
+}

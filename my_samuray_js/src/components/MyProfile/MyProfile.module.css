@@ -1,0 +1,9 @@
+.myProfileWrapper{
+    display: grid;
+    grid-template-columns: 3fr 10fr;
+    grid-template-rows: 200px 375px ;
+    grid-template-areas: 
+    'photo aboutMe'
+    'myFriends myPosts';
+    
+}
