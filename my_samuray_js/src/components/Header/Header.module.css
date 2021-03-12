@@ -1,0 +1,11 @@
+.header{
+    grid-area: header;
+    background-color: chartreuse;
+}
+.logoStyle{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
