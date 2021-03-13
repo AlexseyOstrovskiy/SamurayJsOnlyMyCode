@@ -4,5 +4,6 @@ let redusers= combineReducers({
     profile:profileReducer
 });
 
-let store = createStore(redusers)
+let store = createStore(redusers);
+window.store=store;
 export default store;

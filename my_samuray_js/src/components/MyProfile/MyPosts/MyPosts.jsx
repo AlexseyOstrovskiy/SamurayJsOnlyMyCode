@@ -7,15 +7,25 @@ import PostUnit from './PostUnit/PostUnit';
 const MyPosts =(props)=>{
     let newPostText = React.createRef();
     let postElements = props.posts.map((p) => <PostUnit textPost = {p.postText}/>);
-    return (
 
+    let onPostChange=()=>{
+        let text = newPostText.current.value;
+        props.updateNewPostValue(text);
+
+    }
+
+    let onAddPost =()=>{
+            props.addNewPost()
+    }
+    
+    return (
         <div className={s.MyPosts}>
            <div>
                <div>Create new my post:</div>
-               <textarea ref={newPostText} placeholder='Write you post'> 
+               <textarea ref={newPostText} onChange={onPostChange} value={props.textPostFromState}> 
                </textarea>
                <br></br>
-               <button>Add post</button>
+               <button onClick={onAddPost}>Add post</button>
            </div>
            <div>
                {postElements}
