@@ -3,7 +3,7 @@ import s from '../MyProfile/MyProfile.module.css';
 import AboutMe from './AboutMe/AboutMe';
 import MyFriends from './MyFriends/MyFriends';
 import MyPhoto from './MyPhoto/MyPhoto';
-import MyPosts from './MyPosts/MyPosts';
+import MyPostsContainer from './MyPosts/MyPostsContainer';
 
 
 const MyProfile =(props)=>{
@@ -13,7 +13,7 @@ const MyProfile =(props)=>{
             <div className={s.myProfileWrapper}>
                 <MyPhoto />
                 <AboutMe />
-                <MyPosts />
+                <MyPostsContainer />
                 <MyFriends />
             </div>
         </div>
