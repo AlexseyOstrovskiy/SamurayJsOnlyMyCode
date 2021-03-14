@@ -4,7 +4,7 @@ import {deleteThisPostAC} from '../../../../redux/profileReducer';
 
 let mapStateToProps = (state) =>{
     return{
-        id:state.profile.myPosts.id
+        // postLength:state.profile.myPostsLength
     }
 };
 

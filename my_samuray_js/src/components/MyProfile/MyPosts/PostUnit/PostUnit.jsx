@@ -3,7 +3,9 @@ import s from './PostUnit.module.css';
 
 
 const PostUnit =(props)=>{
-   
+//    let lastId = props.postLength;
+//     console.log(lastId);
+
     let onDeletePost =()=>{
         let id = props.id;
         props.deleteThisPost(id);
