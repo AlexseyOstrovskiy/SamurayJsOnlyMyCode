@@ -34,14 +34,9 @@ const profileReducer = (state=initialState, action) =>{
                     myPostsLength: state.myPosts.length + 1
                 }
         case DELETE_THIS_POST:
-            // alert('удалить' +action.id)
-            // indexForDeleted = state.myPosts.indexOf(action.id)
             postForDeleted=state.myPosts.find(item =>item.id == action.id)
             idForDelete = state.myPosts.indexOf(postForDeleted)
-            // alert('indexForDeleted  ' + postForDeleted.id)
-            console.log(postForDeleted)
-            console.log(postForDeleted.id)
-            state.myPosts.splice(postForDeleted.id -1, 1)
+            state.myPosts.splice(idForDelete, 1)
             return{    
                     ...state,
                     myPosts:[...state.myPosts]
