@@ -1,12 +1,13 @@
 import React from 'react';
 import s from '../MyPosts/MyPosts.module.css';
-import PostUnit from './PostUnit/PostUnit';
+import PostUnitContainer from './PostUnit/PostUnitContainer';
 
 
 
 const MyPosts =(props)=>{
     let newPostText = React.createRef();
-    let postElements = props.posts.map((p) => <PostUnit textPost = {p.postText}/>);
+    // let currentLastId = props.posts.lengh();
+    let postElements = props.posts.map((p) => <PostUnitContainer textPost = {p.postText} />);
 
     let onPostChange=()=>{
         let text = newPostText.current.value;

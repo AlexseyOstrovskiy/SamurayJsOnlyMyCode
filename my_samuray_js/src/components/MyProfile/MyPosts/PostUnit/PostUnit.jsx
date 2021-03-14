@@ -3,10 +3,17 @@ import s from './PostUnit.module.css';
 
 
 const PostUnit =(props)=>{
-    
+   
+    let onDeletePost =()=>{
+        let id = props.id;
+        props.deleteThisPost(id);
+    }
+
     return (
         <div className={s.postStyle} >
            {props.textPost}
+           <br></br>
+           <button onClick={onDeletePost} className={s.deleteBtnStyle}>Delete this post</button>
         </div>
     )
 }

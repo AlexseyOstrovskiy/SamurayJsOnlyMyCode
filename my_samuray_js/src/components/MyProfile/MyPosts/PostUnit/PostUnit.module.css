@@ -3,3 +3,11 @@
     margin: 10px;
     border-radius: 5px;
 }
+
+.deleteBtnStyle{
+    display: block;
+    margin-left: auto;
+    margin-right: 5px;
+    background-color: rgb(236, 232, 171);
+    opacity: 0.8;
+}
