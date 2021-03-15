@@ -1,0 +1,13 @@
+.Messenger{
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-template-areas: 
+    'contacts messeges';
+}
+
+.messagesContainerStyle{
+grid-area: messeges;
+background-color: tomato;
+margin: 5px;
+border-radius: 10px;
+}

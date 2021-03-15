@@ -6,8 +6,10 @@ const ContactUnit =(props)=>{
    
     return (
 
-        <div className={s.ContactUnit}>
+        <div className={s.contactUnit}>
+           <div className={s.contactStyle}>
             {props.name}
+            </div>
         </div>
     )
 }

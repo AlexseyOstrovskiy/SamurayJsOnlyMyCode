@@ -6,7 +6,7 @@ const Contact =(props)=>{
    let contactElements = props.contacts.map((p) => <ContactUnit name={p.name}/>)
     return (
 
-        <div className={s.Messenger}>
+        <div className={s.Contact}>
             {contactElements}
         </div>
     )

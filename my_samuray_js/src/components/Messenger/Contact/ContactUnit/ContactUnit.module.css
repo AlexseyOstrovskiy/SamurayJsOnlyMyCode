@@ -1,0 +1,12 @@
+.contactUnit{
+    grid-area: contacts;
+    background-color: thistle;
+    margin: 5px;
+    border-radius: 10px;  
+}
+.contactStyle{
+    width: max-content;
+    margin: auto;
+    font-style: oblique;
+    font-weight: bold;
+}

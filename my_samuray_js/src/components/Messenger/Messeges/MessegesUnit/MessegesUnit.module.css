@@ -1,0 +1,11 @@
+.messegesUnit{
+    background-color: thistle;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.messegesStyle{
+    width: max-content;
+    margin: auto;
+    font-family:cursive;
+}
