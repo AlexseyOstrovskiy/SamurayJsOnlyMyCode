@@ -1,12 +1,13 @@
 import React from 'react';
 import s from '../Messenger/Messenger.module.css';
+import ContactContainer from './Contact/ContactContainer';
 
 
 const Messenger =(props)=>{
     return (
 
         <div className={s.Messenger}>
-            This is my Messenger
+            <ContactContainer />
         </div>
     )
 }
