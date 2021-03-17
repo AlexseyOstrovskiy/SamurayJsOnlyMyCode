@@ -11,29 +11,40 @@ let initialState = {
                           {idMess:2, mesage:'myMess#2'},  
                         ]},
         {id:2, messages:[{idMess:1, mesage:'I want to beer'},
-                        {idMess:2, mesage:'seriosly, man, i want to beer!'},  
+                        {idMess:2, mesage:'seriosly, man, i want to beer!'},
+                        {idMess:2, mesage:'seriosly, beer!'},
+                         {idMess:2, mesage:'seriosly, beer!'},  
                       ]},
         {id:3, messages:[{idMess:1, mesage:'Pizza'},
                       {idMess:2, mesage:'PIZZA with pineApple'},  
                     ]},
 
     ],
-    allMessagesCurrentContact : [{id:'', currentMessages:  [{idMess: 777, mesage:'message777'},
-                                                            {idMess: 888, mesage:'message888'},
-                                                            {idMess: 999, mesage:'message999'}]
-                                                }],
+    allMessagesCurrentContact : [  {idMess: 777, mesage:''},
+                                   {idMess: 888, mesage:''},
+                                   {idMess: 999, mesage:''}
+                                                ],
     newTextMessage: 'new Text from messenger-reducer'
 }
 const messengerReducer = (state=initialState, action) => {
     switch(action.type){
         case OPEN_MESSAGES_THIS_CONTACT:
-            let newAllMessagesCurrentContact = {    
-                id:action.id,
-                 currentMessages:[{idMess:7777, message:state.allMessages[action.id].messages.mesage}]
-        };
+       let i = 0;
+       let x = state.allMessages[1].messages.length;
+       let messageCurrentContactArray= [];
+    let messageCurrentContact;
+        while( i<x ){
+                 messageCurrentContact = {
+                idMess:1111111111,
+                mesage:state.allMessages[1].messages[i].mesage
+                };
+                messageCurrentContactArray.push(messageCurrentContact)
+                console.log('test' + messageCurrentContactArray.length);
+                i++;
+        }
             return{
                 ...state,
-                allMessagesCurrentContact:[...state.allMessagesCurrentContact,newAllMessagesCurrentContact ]
+                allMessagesCurrentContact:[...state.allMessagesCurrentContact, messageCurrentContact ]
             }
         
         default:

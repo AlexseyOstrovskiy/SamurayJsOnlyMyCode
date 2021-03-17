@@ -5,7 +5,7 @@ let mapStateToProps=(state)=>{
     return{
         // version 1
         // messages:state.messenger.allMessages      
-        messages: state.messenger.allMessagesCurrentContact[0]  
+        messages: state.messenger.allMessagesCurrentContact  
     }
     
 };
