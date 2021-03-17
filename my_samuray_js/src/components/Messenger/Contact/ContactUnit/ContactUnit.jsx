@@ -3,9 +3,10 @@ import s from '../ContactUnit/ContactUnit.module.css';
 import message2 from '../../../../assets/img/message2.png';
 
 const ContactUnit =(props)=>{
-    let id = 0;
-    let openMessages = (id) =>{
-      
+    
+    let openMessages = () =>{
+       
+        let id = 0;
         props.openMessagesThisContact(id);
        }
     return (

@@ -1,10 +1,11 @@
 import React from 'react';
 import s from '../Contact/Contact.module.css';
 import ContactUnit from './ContactUnit/ContactUnit';
+import ContactUnitContainer from '../Contact/ContactUnit/ContactUnitContainer';
 
 
 const Contact =(props)=>{
-   let contactElements = props.contacts.map((p) => <ContactUnit name={p.name}/>)
+   let contactElements = props.contacts.map((p) => <ContactUnitContainer name={p.name}/>)
    let test = () =>{
     //   return alert('hi')
    }

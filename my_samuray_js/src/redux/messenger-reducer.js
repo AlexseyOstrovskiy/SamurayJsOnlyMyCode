@@ -33,7 +33,7 @@ const messengerReducer = (state=initialState, action) => {
         };
             return{
                 ...state,
-                allMessagesCurrentContact:[...newAllMessagesCurrentContact]
+                allMessagesCurrentContact:[...state.allMessagesCurrentContact,newAllMessagesCurrentContact ]
             }
         
         default:
