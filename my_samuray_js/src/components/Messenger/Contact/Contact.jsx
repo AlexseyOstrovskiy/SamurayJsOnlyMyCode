@@ -6,7 +6,7 @@ import ContactUnit from './ContactUnit/ContactUnit';
 const Contact =(props)=>{
    let contactElements = props.contacts.map((p) => <ContactUnit name={p.name}/>)
    let test = () =>{
-      return alert('hi')
+    //   return alert('hi')
    }
    return (
         <div className={s.сontact} onClick={test} >
