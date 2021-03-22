@@ -6,8 +6,8 @@ const ContactUnit =(props)=>{
     
     let openMessages = () =>{
        
-        let id = 0;
-        props.openMessagesThisContact(id);
+        
+        props.openMessagesThisContact(props.id);
        }
     return (
 

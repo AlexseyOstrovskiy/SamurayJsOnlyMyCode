@@ -5,7 +5,7 @@ import ContactUnitContainer from '../Contact/ContactUnit/ContactUnitContainer';
 
 
 const Contact =(props)=>{
-   let contactElements = props.contacts.map((p) => <ContactUnitContainer name={p.name}/>)
+   let contactElements = props.contacts.map((p) => <ContactUnitContainer name={p.name} id={p.id}/>)
    let test = () =>{
     //   return alert('hi')
    }
