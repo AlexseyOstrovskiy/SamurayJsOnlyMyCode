@@ -13,17 +13,14 @@ let initialState = {
         {id:2, messages:[{idMess:1, mesage:'I want to beer'},
                         {idMess:2, mesage:'seriosly, man, i want to beer!'},
                         {idMess:2, mesage:'seriosly, beer!'},
-                         {idMess:2, mesage:'seriosly, beer!'},  
+                         {idMess:2, mesage:'seriosly, beer2!'},  
                       ]},
         {id:3, messages:[{idMess:1, mesage:'Pizza'},
                       {idMess:2, mesage:'PIZZA with pineApple'},  
                     ]},
 
     ],
-    allMessagesCurrentContact : [  {idMess: 777, mesage:''},
-                                   {idMess: 888, mesage:''},
-                                   {idMess: 999, mesage:''}
-                                                ],
+    allMessagesCurrentContact : [ ],
     newTextMessage: 'new Text from messenger-reducer'
 }
 const messengerReducer = (state=initialState, action) => {
@@ -33,19 +30,37 @@ const messengerReducer = (state=initialState, action) => {
        let x = state.allMessages[1].messages.length;
        let messageCurrentContactArray= [];
     let messageCurrentContact;
-        while( i<x ){
+        for(i; i<x; i++){
                  messageCurrentContact = {
                 idMess:1111111111,
                 mesage:state.allMessages[1].messages[i].mesage
                 };
                 messageCurrentContactArray.push(messageCurrentContact)
-                console.log('test' + messageCurrentContactArray.length);
-                i++;
-        }
-            return{
-                ...state,
-                allMessagesCurrentContact:[...state.allMessagesCurrentContact, messageCurrentContact ]
+                console.log('test' + messageCurrentContactArray[i].mesage);
+             
             }
+                    // let messageCurrentContact0 = {
+                    // idMess:1111111111,
+                    // mesage:state.allMessages[1].messages[0].mesage
+                    // };
+        
+                    // let messageCurrentContact1 = {
+                    //     idMess:1111111111,
+                    //     mesage:state.allMessages[1].messages[1].mesage
+                    //     };
+                        
+                    // let messageCurrentContact2 = {
+                    //         idMess:1111111111,
+                    //         mesage:state.allMessages[1].messages[2].mesage
+                    //         };
+                return{
+                ...state,
+                allMessagesCurrentContact:[...state.allMessagesCurrentContact, messageCurrentContactArray]
+                // allMessagesCurrentContact:[...state.allMessagesCurrentContact, messageCurrentContactArray[0] ],
+               
+            }
+           
+        
         
         default:
             return state;
