@@ -29,7 +29,8 @@ let initialState = {
     ],
     allMessagesCurrentContact: [],
     newTextMessage: 'new Text from messenger-reducer',
-    cleanAllMessagesCurrentContact: []
+    cleanAllMessagesCurrentContact: [],
+    idCurrentContact:0
 }
 
 
@@ -52,7 +53,8 @@ const messengerReducer = (state = initialState, action) => {
             }
             return {
                 ...state,
-                allMessagesCurrentContact: [...state.allMessagesCurrentContact]
+                allMessagesCurrentContact: [...state.allMessagesCurrentContact],
+                idCurrentContact: action.id
             };
         case UPDATE_NEW_MESSAGE_TEXT:
             return{
@@ -65,11 +67,11 @@ const messengerReducer = (state = initialState, action) => {
                 idMess:88888888,
                 mesage:state.newTextMessage
             };
+            state.allMessages[state.idCurrentContact -1].messages.push(newMessage)
             return{
                 ...state,
                 allMessagesCurrentContact:[...state.allMessagesCurrentContact, newMessage],
                 newTextMessage:' '
-
             }
         default:
             return state;
