@@ -1,5 +1,6 @@
 const OPEN_MESSAGES_THIS_CONTACT = 'OPEN-MESSAGES-THIS-CONTACT';
-
+const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT'
+const SEND_NEW_MESSAGE_CURRENT_CONTACT = 'SEND-NEW-MESSAGE-CURRENT-CONTACT';
 let initialState = {
     contacts: [
         { id: 1, name: 'Tonny' },
@@ -52,6 +53,23 @@ const messengerReducer = (state = initialState, action) => {
             return {
                 ...state,
                 allMessagesCurrentContact: [...state.allMessagesCurrentContact]
+            };
+        case UPDATE_NEW_MESSAGE_TEXT:
+            return{
+                ...state,
+                newTextMessage:action.textNewMessage
+
+            };
+        case SEND_NEW_MESSAGE_CURRENT_CONTACT:
+            let newMessage = {
+                idMess:88888888,
+                mesage:state.newTextMessage
+            };
+            return{
+                ...state,
+                allMessagesCurrentContact:[...state.allMessagesCurrentContact, newMessage],
+                newTextMessage:' '
+
             }
         default:
             return state;
@@ -59,5 +77,6 @@ const messengerReducer = (state = initialState, action) => {
 }
 
 export const openMessagesThisContactAC = (id) => ({ type: OPEN_MESSAGES_THIS_CONTACT, id: id });
-
+export const updateNewMessageTextAC = (textNewMessage)=>({type:UPDATE_NEW_MESSAGE_TEXT,textNewMessage:textNewMessage});
+export const sendNewMessageCurrentContactAC = () =>({type:SEND_NEW_MESSAGE_CURRENT_CONTACT});
 export default messengerReducer;
