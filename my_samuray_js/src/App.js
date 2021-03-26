@@ -6,7 +6,7 @@ import Navigation from './components/Navigation/Navigation';
 import {BrowserRouter, Route} from 'react-router-dom';
 import MyProfile from './components/MyProfile/MyProfile';
 import Messenger from './components/Messenger/Messenger';
-import Users from './components/Users/Users';
+import UsersContainer from './components/Users/UsersContainer';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
      <Route path = '/messenger' render=
      {() => <Messenger/>}/>
      <Route path = '/users' render=
-     {() => <Users/>}/>
+     {() => <UsersContainer/>}/>
     </div>
     {/* <Content/> */}
      <Footer/>
