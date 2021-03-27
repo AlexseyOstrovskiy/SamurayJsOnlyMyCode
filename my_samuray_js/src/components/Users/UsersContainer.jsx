@@ -9,13 +9,14 @@ let mapStateToProps = (state)=>{
 let mapDispatchToProps=(dispatch)=>{
     return{
         follow:(id)=>{
-            dispatch(followAC(id))
+            dispatch(followAC(id));
         },
         unfollow:(id)=>{
-            dispatch(unFollowAC(id))
+          
+            dispatch(unFollowAC(id));
         },
         setUsers:(users)=>{
-            dispatch(setUsersAC(users))
+            dispatch(setUsersAC(users));
         }
     }
 };
