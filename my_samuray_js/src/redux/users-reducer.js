@@ -10,7 +10,11 @@ let initialState={
         // {id:2,followed:true,userPhoto:userNoPhoto, fullName:'Jhon', status:'I need a new job, man! ', location:{city:'Minsk', country:'Belarus'}},
         // {id:3,followed:false,userPhoto:userNoPhoto, fullName:'Will', status:'I very good programmer!', location:{city:'Vitebsk', country:'Belarus'}},
         // {id:4,followed:true,userPhoto:userNoPhoto, fullName:'Joshua', status:'I love beer man!', location:{city:'Kiev', country:'Ukrain'}},
-    ]
+    ], 
+    pageSize:5,
+    totalUsersCount:41,
+    currentPage:1,
+    isFetching: false
 }
 
 const usersReducer = (state= initialState, action) =>{
@@ -38,7 +42,8 @@ const usersReducer = (state= initialState, action) =>{
         case SET_USERS:
             return {
                 ...state,
-                users:[...state.users, ...action.users]
+                // users:[...state.users, ...action.users]
+                users:[ ...action.users]
         }
         default:
             return state;
